@@ -1,6 +1,8 @@
 import * as React from "react";
 import Joseph from "../components/Joseph";
 import Evelyn from "../components/Evelyn";
+import Wilson from "../components/Wilson";
+import Jacob from "../components/Jacob"
 
 const pageStyles = {
   color: "#232129",
@@ -95,6 +97,7 @@ const IndexPage = () => {
       </p>
 
       <Joseph/>
+      <Jacob />
       <Evelyn/>
 
       <img
