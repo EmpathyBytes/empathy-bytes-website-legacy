@@ -96,6 +96,7 @@ const IndexPage = () => {
         update in real-time. 😎
       </p>
 
+      <Wilson></Wilson>
       <Joseph/>
       <Jacob />
       <Evelyn/>
