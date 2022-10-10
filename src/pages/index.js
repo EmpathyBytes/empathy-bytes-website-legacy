@@ -1,6 +1,6 @@
 import * as React from "react";
 import Joseph from "../components/Joseph";
-import Wilson from "../components/wilson";
+import Evelyn from "../components/Evelyn";
 
 const pageStyles = {
   color: "#232129",
@@ -94,8 +94,8 @@ const IndexPage = () => {
         update in real-time. 😎
       </p>
 
-      <Wilson></Wilson>
       <Joseph/>
+      <Evelyn/>
 
       <img
         alt="Gatsby G Logo"
