@@ -1,6 +1,7 @@
 import * as React from "react";
 import Joseph from "../components/Joseph";
 import Wilson from "../components/wilson";
+import Jacob from "../components/Jacob"
 
 const pageStyles = {
   color: "#232129",
@@ -96,6 +97,7 @@ const IndexPage = () => {
 
       <Wilson></Wilson>
       <Joseph/>
+      <Jacob />
 
       <img
         alt="Gatsby G Logo"
