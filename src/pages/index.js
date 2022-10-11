@@ -1,6 +1,7 @@
 import * as React from "react";
 import Joseph from "../components/Joseph";
 import Wilson from "../components/wilson";
+import Princess from "../components/Princess";
 import Auds from "../components/Audrey";
 
 const pageStyles = {
@@ -97,6 +98,7 @@ const IndexPage = () => {
 
       <Wilson></Wilson>
       <Joseph/>
+      <Princess></Princess>
       <Auds></Auds>
 
       <img
