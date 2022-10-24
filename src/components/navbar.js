@@ -51,9 +51,9 @@ export default function NavBar() {
                     </div>
                     <div style={right}>
                         {/* Links to other pages goes here! */}
-                        <Link style={link} to='https://liusef.github.io/dance-goat-dance/'>Home</Link>
+                        <Link style={link} to='/'>Home</Link>
                         <Link style={link} to='https://liusef.github.io/dance-goat-dance/'>Home 2</Link>
-                        <Link style={link} to='https://liusef.github.io/dance-goat-dance/'>Home 3</Link>
+                        <Link style={link} to='/projects'>Projects</Link>
                         <Link style={link} to='https://liusef.github.io/dance-goat-dance/'>Home 4</Link>
 
                         {/* This div adds space to the right of the
