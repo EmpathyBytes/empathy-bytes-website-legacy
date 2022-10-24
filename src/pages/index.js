@@ -4,7 +4,9 @@ import Joseph from "../components/Joseph";
 import Wilson from "../components/wilson";
 import Princess from "../components/Princess";
 import Auds from "../components/Audrey";
+import Jacob from "../components/Jacob"
 import NavBar from "../components/navbar";
+
 
 const pageStyles = {
   color: "#232129",
@@ -100,10 +102,13 @@ const IndexPage = () => {
             update in real-time. 😎
           </p>
 
+
+
           <Wilson></Wilson>
           <Joseph/>
           <Princess></Princess>
           <Auds></Auds>
+          <Jacob />
 
           <img
               alt="Gatsby G Logo"
