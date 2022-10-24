@@ -6,6 +6,7 @@ import Wilson from "../components/Wilson";
 import Jacob from "../components/Jacob"
 import Princess from "../components/Princess";
 import Auds from "../components/Audrey";
+import Jacob from "../components/Jacob"
 import NavBar from "../components/navbar";
 
 const pageStyles = {
