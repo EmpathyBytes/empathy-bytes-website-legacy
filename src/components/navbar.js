@@ -5,8 +5,9 @@ import Icon from '../images/icon.png'
 
 export default function NavBar() {
     return (
-        <header >
-            Richard
+        <header>
+            <Link to="/">Go home</Link>
+            <Link to="/people">Go People</Link>
         </header>
     )
 }
