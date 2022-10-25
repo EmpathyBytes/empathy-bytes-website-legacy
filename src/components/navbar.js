@@ -52,8 +52,8 @@ export default function NavBar() {
                     <div style={right}>
                         {/* Links to other pages goes here! */}
                         <Link style={link} to='/'>Home</Link>
-                        <Link style={link} to='/about'>About Us</Link>
                         <Link style={link} to='/projects'>Projects</Link>
+                        <Link style={link} to='/people'>People</Link>
                         <Link style={link} to='/contact'>Contact</Link>
 
                         {/* This div adds space to the right of the
