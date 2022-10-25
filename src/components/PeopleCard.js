@@ -15,6 +15,7 @@ const card = {
 }
 
 const name = {
+    fontFamily: "Montserrat",
     fontSize: "2em",
     marginBottom: "6px"
 }

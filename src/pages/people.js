@@ -5,6 +5,10 @@ import { client } from "../client";
 
 // Temporary page created to house the people card information - Jacob
 
+const container = {
+    width: '60%',
+}
+
 const PeoplePage = () => {
 
     const[isLoading, setIsLoading] = useState(false)
@@ -52,7 +56,7 @@ const PeoplePage = () => {
     console.log(people)
 
   return (
-    <div>
+    <div style={container}>
         <NavBar />
         <div>
         {/* Iterating and Creating each content card */}
