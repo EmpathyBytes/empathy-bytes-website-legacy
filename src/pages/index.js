@@ -4,9 +4,9 @@ import Joseph from "../components/Joseph";
 import Wilson from "../components/wilson";
 import Princess from "../components/Princess";
 import Auds from "../components/Audrey";
+import Hero from "../components/hero";
 import Jacob from "../components/Jacob"
 import NavBar from "../components/navbar";
-
 
 const pageStyles = {
   color: "#232129",
@@ -87,8 +87,14 @@ const badgeStyle = {
 
 const IndexPage = () => {
   return (
+    <main style={pageStyles}>
+      <h1 style={headingStyles}>
+        Test
+        <br />
+        <span style={headingAccentStyles}>
       <div>
         <NavBar/>
+        <Hero></Hero>
         <main style={pageStyles}>
           <h1 style={headingStyles}>
             Test
