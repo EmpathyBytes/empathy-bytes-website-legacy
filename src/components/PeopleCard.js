@@ -1,3 +1,5 @@
+// Card component to hold the people information
+
 import React from "react";
 
 const cardContainer = {
