@@ -7,6 +7,7 @@ import Jacob from "../components/Jacob"
 import Princess from "../components/Princess";
 import Auds from "../components/Audrey";
 import NavBar from "../components/navbar";
+import Hero from "../components/hero";
 
 const pageStyles = {
   color: "#232129",
@@ -89,6 +90,7 @@ const IndexPage = () => {
   return (
       <div>
         <NavBar/>
+        <Hero></Hero>
         <main style={pageStyles}>
           <h1 style={headingStyles}>
             Test
