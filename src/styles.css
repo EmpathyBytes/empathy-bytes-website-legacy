@@ -1,4 +1,57 @@
 html,
 body {
+    font-family: "Segoe UI Variable Display", "Segoe UI" ,-apple-system, Roboto, sans-serif, serif;
     margin: 0;
+}
+
+/* Desktop classes will disappear at breakpoint
+   and vice versa for mobile
+
+   Currently set at 750px, but can change in the future
+   */
+.desktop {display: block;}
+.mobile {display: none;}
+@media (max-width: 750px) {
+    .desktop {display: none;}
+    .mobile {display: block;}
+}
+
+/* navbar stuff */
+.navbar-outer {
+    z-index: 10;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+
+    transition: 0.25s cubic-bezier(0, 0.5, 0.5, 1);
+    height: 4rem;
+
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.navbar-top {
+    height: 6rem;
+    background: none;
+}
+
+.navbar-scrolled {
+    height: 4rem;
+    background: dimgrey;
+}
+
+.navbar-content {
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20vw;
+}
+
+.navbar-link {
+    text-decoration: none;
+    color: black; /* Change this to proper color in the future */
+    font-size: 1.25rem;
 }
