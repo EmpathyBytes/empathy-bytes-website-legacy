@@ -55,3 +55,7 @@ body {
     color: black; /* Change this to proper color in the future */
     font-size: 1.25rem;
 }
+
+.navbar-selected {
+    font-weight: bold;
+}
