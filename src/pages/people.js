@@ -2,6 +2,7 @@ import React, {useState, useEffect, useCallback} from "react"
 import NavBar from "../components/navbar";
 import PeopleCard from "../components/PeopleCard"
 import { client } from "../client";
+import Layout from "../components/layout";
 
 // Temporary page created to house the people card information - Jacob
 
@@ -56,19 +57,20 @@ const PeoplePage = () => {
     console.log(people)
 
   return (
-    <div style={container}>
-        <NavBar />
-        <div>
-        {/* Iterating and Creating each content card */}
-            {people.map((item) => (
-                <PeopleCard 
-                    name={item.personName}
-                    image={item.personImage}
-                    role={item.personRole}
-                />
-            ))}
+    <Layout>
+        <div style={container}>
+            <div>
+                {/* Iterating and Creating each content card */}
+                {people.map((item) => (
+                    <PeopleCard
+                        name={item.personName}
+                        image={item.personImage}
+                        role={item.personRole}
+                    />
+                ))}
+            </div>
         </div>
-    </div>
+    </Layout>
   )
 }
 
