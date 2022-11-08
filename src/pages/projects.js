@@ -1,32 +1,36 @@
 import * as React from "react";
 import '../styles.css';
 import NavBar from "../components/navbar";
+import Project from "../components/Project"
+import Grid from '@mui/material/Grid';
+import Box from '@mui/material/Box';
 
-const pageStyles = {
-  color: "#232129",
+const container = {
+  width: '80%',
   padding: 96,
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-};
-
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-};
-
-const headingAccentStyles = {
-  color: "#663399",
-};
+  paddingTop: 150
+}
 
 const projectsPage = () => {
    return(
-       <div>
+       <div style={container}>
        <NavBar/>
-       <main style={pageStyles}>
-           <h1 style={headingStyles}>
-               <span style={headingAccentStyles}>Projects</span>
-           </h1>
-           </main>
+        <Box sx={{ flexGrow: 1 }}>
+          <Grid container spacing={2}>
+            <Grid Project xs={6} padding={2}>
+              <Project title="Covid Freshman"></Project>
+            </Grid>
+            <Grid Project xs={6} padding={2}>
+              <Project title="Dance Community"></Project>
+            </Grid>
+            <Grid Project xs={6} padding={2}>
+              <Project title="Distance Math"></Project>
+            </Grid>
+            <Grid Project xs={6} padding={2}>
+              <Project></Project>
+            </Grid>
+          </Grid>
+      </Box>
        </div>
    );
 };
