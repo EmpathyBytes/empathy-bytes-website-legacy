@@ -1,58 +1,6 @@
 import React, { useContext, useEffect } from "react";
-//import { FormCtx } from "./Form";
 import '../styles.css';
 import NavBar from "../components/navbar";
-
-//// how do i put fields in?
-//const contactBox = props => {
-//    const {id} = props;
-//    const {setFields, addField} = useContext(FormCtx);
-//    const {
-//        value,
-//        classes,
-//        validate,
-//        placeholder,
-//        label = "",
-//        event = {}
-//    } = field;
-//
-//    const {onChange, ...restEvents} = events;
-//    const {contClass, fieldClass, errorClass} = classes;
-//
-//    const handleChange = event => {
-//        setFields(event, field);
-//
-//        if (typeof onChange === "function") {
-//            onChange({
-//                ...field,
-//                value: event.target.value
-//            });
-//        }
-//    };
-//
-//    useEffect(() => {
-//        addField({
-//        field: props,
-//        value
-//        });
-//        }, []);
-//    return (
-//    <div classname = {contClass}>
-//    {label}
-//    <input
-//            {...restEvents}
-//            id = {id}
-//            type="text"
-//            value={value}
-//            class={fieldClass}
-//            validate={validate}
-//            onChange = {handleChange}
-//            placeholder={placeholder}
-//          />
-//          <p className = {errorClass}></p>
-//    </div>
-//    );
-//};
 
 const pageStyles = {
   color: "#232129",
