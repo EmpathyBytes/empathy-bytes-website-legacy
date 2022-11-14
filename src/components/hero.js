@@ -28,6 +28,7 @@ const Hero = () => {
     return (
         <div style={mastHeadStyle}>
             <h1 style={headingStyle}>Empathy Bytes</h1>
+            <h2>Employing immersive tech to enable people to understand new perspectives</h2>
             <button style={roundedBorder}>Learn More</button>
         </div>
     )
