@@ -19,7 +19,8 @@ module.exports = {
       type: {
         MediaItem: {
           localFile: {
-            maxFileSizeBytes: 0, // 10Mb. Set it to 0 to avoid downloads
+            excludeByMimeTypes: [`image/png`],
+            maxFileSizeBytes: -1, // 10Mb. Set it to 0 to avoid downloads
           },
         },
       },
