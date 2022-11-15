@@ -1,14 +1,14 @@
 import * as React from "react";
 import '../styles.css';
 import Joseph from "../components/Joseph";
-import Wilson from "../components/wilson";
+import Evelyn from "../components/Evelyn";
+import Wilson from "../components/Wilson";
+import Jacob from "../components/Jacob"
 import Princess from "../components/Princess";
 import Auds from "../components/Audrey";
-import Jacob from "../components/Jacob"
 import NavBar from "../components/navbar";
 import Hero from "../components/hero";
 import Layout from "../components/layout";
-
 
 const pageStyles = {
   color: "#232129",
@@ -104,13 +104,12 @@ const IndexPage = () => {
             update in real-time. 😎
           </p>
 
-
-
-          <Wilson></Wilson>
-          <Joseph/>
-          <Princess></Princess>
-          <Auds></Auds>
-          <Jacob />
+      <Wilson></Wilson>
+      <Joseph/>
+      <Jacob />
+      <Princess></Princess>
+      <Auds></Auds>
+      <Evelyn/>
 
           <img
               alt="Gatsby G Logo"
