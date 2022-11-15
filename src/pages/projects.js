@@ -47,7 +47,7 @@ const ProjectsPage = () => {
                 image={
                   item.featuredImage != null
                     ? item.featuredImage.node.mediaItemUrl
-                    : false
+                    : "https://httpcats.com/418.jpg"
                 }
               />
             </Grid>
