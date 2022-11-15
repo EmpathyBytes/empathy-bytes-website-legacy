@@ -1,122 +1,136 @@
 import React, {useState, useEffect, useCallback} from "react"
 import NavBar from "../components/navbar";
 import PeopleCard from "../components/PeopleCard"
-import { client } from "../client";
-import Layout from "../components/layout";
 import { useStaticQuery, graphql } from "gatsby"
+
+// Bootstrap Imports
+import Carousel from 'react-bootstrap/Carousel';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+// Multi Bootstrap Imports
+import MCarousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+const responsive = {
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 5,
+    slidesToSlide: 1 // optional, default to 1.
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 464 },
+    items: 3,
+    slidesToSlide: 1 // optional, default to 1.
+  },
+  mobile: {
+    breakpoint: { max: 464, min: 0 },
+    items: 1,
+    slidesToSlide: 1 // optional, default to 1.
+  }
+};
+import Layout from "../components/layout";
 
 // Temporary page created to house the people card information - Jacob
 
 const container = {
-    width: '60%',
+  backgroundColor: "#003057",
+  height: "100vh",
+  width: "100vw",
+  padding: "3% 1% 1% 3%"
 }
-const PeoplePage = () => {
+const header = {
+  fontFamily: "Roboto",
+  fontSize: "3vw",
+  color: "white"
+}
+const header2 = {
+  fontFamily: "Roboto",
+  fontSize: "2vw",
+  color: "white"
+}
+const carouselInner = {
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  padding: "2% 0 3% 0"
+}
+const gapS = {
+  padding: "0.5% 0 0.5% 0"
+}
+const gapL = {
+  padding: "2% 0 2% 0"
+}
+const paragraph = {
+  fontFamily: "Roboto",
+  fontWeight: "200",
+  fontSize: "1.5vw",
+  color: "white"
+}
+function PeoplePage() {
 
-
-  // const data = useStaticQuery(graphql`
-  //   query MyQuery {
-  //       allWpPost(filter: {categories: {nodes: {elemMatch: {slug: {eq: "members"}}}}}) {
-  //         edges {
-  //           node {
-  //             title
-  //             content
-  //           }
-  //         }
-  //       }
-  //     }
+   const data = useStaticQuery(graphql`
+     query MyQuery {
+         allWpPost(filter: {categories: {nodes: {elemMatch: {slug: {eq: "members"}}}}}) {
+           edges {
+             node {
+               title
+               content
+             }
+           }
+         }
+       }
       
-  // `);
+   `);
 
-  // const arr = data.allWpPost.edges;
+   const arr = data.allWpPost.edges;
 
-  // const cleanedArr = arr.map((unit) => {
-  //   const { sys, node } = unit;
-  //   const personName = node.title
-  //   const personRole = node.content
-  //   const cleaned = {personName, personRole}
-  //   return cleaned;
-  // })
+   const cleanedArr = arr.map((unit) => {
+     const { sys, node } = unit;
+     const personName = node.title
+     const personRoleRough = node.content
+    const personRole = personRoleRough.substring(4, personRoleRough.length - 5)
+     const cleaned = {personName, personRole}
+     return cleaned;
+ })
 
   return (
     <Layout>
-        <div style={container}>
-            <div>
-                {/* Iterating and Creating each content card */}
-                {/* {cleanedArr.map((item) => (
-                    <PeopleCard
-                        name={item.personName}
-                        image={item.personImage}
-                        role={item.personRole}
-                    />
-                ))} */}
-            </div>
-        </div>
-    </Layout>
+    <div style={container}>
+    <NavBar />
+
+    <hr style={gapS} />
+
+    <div>
+      <h1 style={header}>About Us</h1>
+      <p style={paragraph}>We are a Vertically Integrated Project team at Georgia Tech exploring the lives 
+      of those touched by Georgia Tech’s research and technology initiatives. The Vertically 
+      Integrated Project Program at Georgia Tech brings together teams of undergraduate students 
+      from various years, disciplines, and backgrounds with faculty and graduate students to work 
+      on long-term, large-scale, multidisciplinary projects. Learn more about Georgia Tech’s VIP 
+      program here.</p>
+    </div>
+
+    <hr style={gapL} />
+
+    <div>
+    <h1 style={header2}>Web Team</h1>
+    <hr/>
+      <MCarousel responsive={responsive}>
+        {cleanedArr.map((item) => (
+                <div style={carouselInner}>
+                  <PeopleCard 
+                      name={item.personName}
+                      image={item.personImage}
+                      role={item.personRole}
+                  />
+                </div>
+            ))}
+      </MCarousel>
+    </div>
+    </div>
+</Layout>
   )
+  
 }
-
-// const PeoplePage = () => {
-
-//     const[isLoading, setIsLoading] = useState(false)
-//     const[people, setPeople] = useState([]);
-
-
-//     // Cleaning up the Data Pulled from Contentful
-//     const cleanUpPeople = useCallback((rawData) => {
-//         const cleanPeople = rawData.map((people) => {
-//             const {sys, fields} = people
-//             const {id} = sys
-
-//             const personName = fields.name
-//             const personImage = fields.image
-//             const personRole = fields.role
-
-//             const cleaned = {id, personName, personImage, personRole}
-//             return cleaned
-//         })
-//         setPeople(cleanPeople)
-//     }, [])
-
-//     // Fetching data from contentful
-//     const getPeopleInfo = useCallback(async () => {
-//         setIsLoading(true)
-//         try {
-//             const res = await client.getEntries({ content_type: 'members' })
-//             const resData = res.items;
-//             if (resData) {
-//                 cleanUpPeople(resData)
-//             } else {
-//                 setPeople([])
-//             }
-//             setIsLoading(false)
-//         } catch (error) {
-//             console.log(error)
-//             setIsLoading(false)
-//         }
-//     }, [cleanUpPeople])
-
-//     useEffect(() => {
-//         getPeopleInfo()
-//     }, [getPeopleInfo])
-
-//     console.log(people)
-
-//   return (
-//     <div style={container}>
-//         <NavBar />
-//         <div>
-//         {/* Iterating and Creating each content card */}
-//             {people.map((item) => (
-//                 <PeopleCard 
-//                     name={item.personName}
-//                     image={item.personImage}
-//                     role={item.personRole}
-//                 />
-//             ))}
-//         </div>
-//     </div>
-//   )
-// }
 
 export default PeoplePage
 
