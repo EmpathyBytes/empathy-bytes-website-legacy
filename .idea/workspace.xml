@@ -4,21 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7999c32c-b1f4-4505-820e-fc26479a315f" name="Changes" comment="fixed basic contact form">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/contact.js" afterDir="false" />
-    </list>
+    <list default="true" id="7999c32c-b1f4-4505-820e-fc26479a315f" name="Changes" comment="made a contact page and button" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="joseph" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitSEFilterConfiguration">
@@ -41,7 +33,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="7999c32c-b1f4-4505-820e-fc26479a315f" name="Changes" comment="made a contact page and button" />
+      <changelist id="f4c0b763-fed5-41fc-89f2-e8345467b1c1" name="Changes" comment="" />
       <created>1665773899016</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -54,21 +46,7 @@
       <option name="project" value="LOCAL" />
       <updated>1665776165154</updated>
     </task>
-    <task id="LOCAL-00002" summary="fixed basic contact form">
-      <created>1667316898851</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1667316898851</updated>
-    </task>
-    <task id="LOCAL-00003" summary="fixed basic contact form">
-      <created>1667316905663</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1667316905663</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -84,7 +62,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="made a contact page and button" />
-    <MESSAGE value="fixed basic contact form" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed basic contact form" />
+    <option name="LAST_COMMIT_MESSAGE" value="made a contact page and button" />
   </component>
 </project>

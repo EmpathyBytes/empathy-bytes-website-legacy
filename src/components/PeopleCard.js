@@ -8,23 +8,25 @@ const cardContainer = {
 
 const card = {
     background: "#fff",
-    borderRadius: "7px",
+    borderRadius: "1%",
     boxShadow: "0 2px 5px #ccc",
-    padding: "10px",
-    width: "240px",
-    margin: "16px",
+    padding: "1%",
+    width: "15vw",
+    height: "7.5vw",
+    margin: "1%",
     float: "left",
 }
 
 const name = {
-    fontFamily: "Montserrat",
-    fontSize: "2em",
-    marginBottom: "6px"
+    fontFamily: "Roboto",
+    fontSize: "1.7vw",
+    marginBottom: "1%"
 }
 
 const role = {
-    fontSize: "1em",
-    marginBottom: "6px",
+    fontFamily: "Roboto",
+    fontSize: "0.9vw",
+    marginBottom: "1%",
     whiteSpace: "pre-wrap",
     wordWrap: "break-word",
 }
