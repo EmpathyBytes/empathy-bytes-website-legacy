@@ -8,6 +8,7 @@ import Princess from "../components/Princess";
 import Auds from "../components/Audrey";
 import NavBar from "../components/navbar";
 import Hero from "../components/hero";
+import Layout from "../components/layout";
 
 const pageStyles = {
   color: "#232129",
@@ -88,8 +89,7 @@ const badgeStyle = {
 
 const IndexPage = () => {
   return (
-      <div>
-        <NavBar/>
+    <Layout>
         <Hero></Hero>
         <main style={pageStyles}>
           <h1 style={headingStyles}>
@@ -117,10 +117,10 @@ const IndexPage = () => {
           />
           {/* Testing out pulling from Gatsby Database - Jacob */}
           <div>
-            
+
           </div>
         </main>
-      </div>
+    </Layout>
   );
 };
 
