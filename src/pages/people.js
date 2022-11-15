@@ -2,14 +2,12 @@ import React, {useState, useEffect, useCallback} from "react"
 import NavBar from "../components/navbar";
 import PeopleCard from "../components/PeopleCard"
 import { useStaticQuery, graphql } from "gatsby"
-
-// Bootstrap Imports
-import Carousel from 'react-bootstrap/Carousel';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import Layout from "../components/layout";
 
 // Multi Bootstrap Imports
 import MCarousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+
 const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
@@ -27,7 +25,7 @@ const responsive = {
     slidesToSlide: 1 // optional, default to 1.
   }
 };
-import Layout from "../components/layout";
+
 
 // Temporary page created to house the people card information - Jacob
 
