@@ -27,6 +27,7 @@ const responsive = {
     slidesToSlide: 1 // optional, default to 1.
   }
 };
+import Layout from "../components/layout";
 
 // Temporary page created to house the people card information - Jacob
 
@@ -93,7 +94,8 @@ const PeoplePage = () => {
   })
 
   return (
-    <div style={container}>
+    <Layout>
+          <div style={container}>
         <NavBar />
 
         <hr style={gapS} />
@@ -124,22 +126,8 @@ const PeoplePage = () => {
                     </div>
                 ))}
           </MCarousel>
-
-          {/* <Carousel>
-            {cleanedArr.map((item) => (
-                    <Carousel.Item>
-                      <div style={carouselInner}>
-                        <PeopleCard 
-                            name={item.personName}
-                            image={item.personImage}
-                            role={item.personRole}
-                        />
-                      </div>
-                    </Carousel.Item>
-                ))}
-          </Carousel> */}
-        </div>
-    </div>
+          </div>
+    </Layout>
   )
 }
 

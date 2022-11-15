@@ -6,6 +6,8 @@ import Princess from "../components/Princess";
 import Auds from "../components/Audrey";
 import Jacob from "../components/Jacob"
 import NavBar from "../components/navbar";
+import Hero from "../components/hero";
+import Layout from "../components/layout";
 
 
 const pageStyles = {
@@ -87,8 +89,8 @@ const badgeStyle = {
 
 const IndexPage = () => {
   return (
-      <div>
-        <NavBar/>
+    <Layout>
+        <Hero></Hero>
         <main style={pageStyles}>
           <h1 style={headingStyles}>
             Test
@@ -116,10 +118,10 @@ const IndexPage = () => {
           />
           {/* Testing out pulling from Gatsby Database - Jacob */}
           <div>
-            
+
           </div>
         </main>
-      </div>
+    </Layout>
   );
 };
 

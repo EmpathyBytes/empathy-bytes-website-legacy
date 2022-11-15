@@ -1,6 +1,7 @@
 import * as React from "react";
 import '../styles.css';
 import NavBar from "../components/navbar";
+import Layout from "../components/layout";
 
 // how do i put fields in?
 const contactBox = {
@@ -23,18 +24,19 @@ const headingAccentStyles = {
 
 const contactPage = () => {
    return(
-       <div>
-       <NavBar/>
-       <main style={pageStyles}>
-           <h1 style={headingStyles}>
-               Test
-               <br />
-               <span style={headingAccentStyles}>
-           Contact Us
-       </span>
-           </h1>
-           </main>
-       </div>
+       <Layout>
+           <div>
+               <main style={pageStyles}>
+                   <h1 style={headingStyles}>
+                       Test
+                       <br />
+                       <span style={headingAccentStyles}>
+               Contact Us
+           </span>
+                   </h1>
+               </main>
+           </div>
+       </Layout>
    );
 };
 
