@@ -32,24 +32,16 @@ const ProjectsPage = () => {
 
   const arr = data.allWpPost.nodes;
 
-  const cleanedArr = arr.map((unit) => {
-    const { sys, node } = unit;
-    const projTitle = data.allWpPost.nodes.mediaItemUrl
-    const projImg = data.allWpPost.nodes.mediaItemUrl
-    const cleaned = {projTitle, projImg}
-    return cleaned;
-  })
-
    return(
        <div style={container}>
        <NavBar/>
         <Box sx={{ flexGrow: 1 }}>
           <Grid container spacing={2}>
-          {cleanedArr.map((item) => (
+          {arr.map((item) => (
             <Grid Project xs={6} padding={2}>
                 <Project 
-                    title={item.projTitle}
-                    image={item.projImg}
+                    title={item.title}
+                    //image={item.featuredImage.node.mediaItemUrl}
                 />
                 </Grid>
             ))}
