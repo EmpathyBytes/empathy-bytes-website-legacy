@@ -18,8 +18,9 @@ export default function Project(props) {
       <Card sx={{ maxWidth: 345 }}>
         <CardMedia
           component="img"
-          img src={Icon} // change to wherever we're getting images
-          alt="Logo" 
+          //img src={Icon} // change to wherever we're getting images
+          img src={props.image}
+          alt="img" 
           style={{height: '140'}} 
         />
         <CardActions>

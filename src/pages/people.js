@@ -12,42 +12,42 @@ const container = {
 const PeoplePage = () => {
 
 
-    const data = useStaticQuery(graphql`
-    query MyQuery {
-        allWpPost(filter: {categories: {nodes: {elemMatch: {slug: {eq: "members"}}}}}) {
-          edges {
-            node {
-              title
-              content
-            }
-          }
-        }
-      }
+  // const data = useStaticQuery(graphql`
+  //   query MyQuery {
+  //       allWpPost(filter: {categories: {nodes: {elemMatch: {slug: {eq: "members"}}}}}) {
+  //         edges {
+  //           node {
+  //             title
+  //             content
+  //           }
+  //         }
+  //       }
+  //     }
       
-  `);
+  // `);
 
-  const arr = data.allWpPost.edges;
+  // const arr = data.allWpPost.edges;
 
-  const cleanedArr = arr.map((unit) => {
-    const { sys, node } = unit;
-    const personName = node.title
-    const personRole = node.content
-    const cleaned = {personName, personRole}
-    return cleaned;
-  })
+  // const cleanedArr = arr.map((unit) => {
+  //   const { sys, node } = unit;
+  //   const personName = node.title
+  //   const personRole = node.content
+  //   const cleaned = {personName, personRole}
+  //   return cleaned;
+  // })
 
   return (
     <div style={container}>
         <NavBar />
         <div>
         {/* Iterating and Creating each content card */}
-            {cleanedArr.map((item) => (
+            {/* {cleanedArr.map((item) => (
                 <PeopleCard 
                     name={item.personName}
                     image={item.personImage}
                     role={item.personRole}
                 />
-            ))}
+            ))} */}
         </div>
     </div>
   )
