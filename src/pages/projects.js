@@ -4,6 +4,7 @@ import NavBar from "../components/navbar";
 import Project from "../components/Project";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
+import Layout from "../components/layout";
 import { client } from "../client";
 import { useStaticQuery, graphql } from "gatsby";
 
@@ -36,25 +37,26 @@ const ProjectsPage = () => {
   const arr = data.allWpPost.nodes;
 
   return (
-    <div style={container}>
-      <NavBar />
-      <Box sx={{ flexGrow: 1 }}>
-        <Grid container spacing={2}>
-          {arr.map((item) => (
-            <Grid Project xs={6} padding={2}>
-              <Project
-                title={item.title}
-                image={
-                  item.featuredImage != null
-                    ? item.featuredImage.node.mediaItemUrl
-                    : "https://httpcats.com/418.jpg"
-                }
-              />
-            </Grid>
-          ))}
-        </Grid>
-      </Box>
-    </div>
+    <Layout>
+      <div style={container}>
+        <Box sx={{ flexGrow: 1 }}>
+          <Grid container spacing={2}>
+            {arr.map((item) => (
+              <Grid Project xs={6} padding={2}>
+                <Project
+                  title={item.title}
+                  image={
+                    item.featuredImage != null
+                      ? item.featuredImage.node.mediaItemUrl
+                      : "https://httpcats.com/418.jpg"
+                  }
+                />
+              </Grid>
+            ))}
+          </Grid>
+        </Box>
+      </div>
+    </Layout>
   );
 };
 
