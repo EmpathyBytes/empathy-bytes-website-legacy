@@ -41,7 +41,7 @@ const Hero = () => {
   return (
     <div style={container}>
       <StaticImage
-        src="http://educast.library.gatech.edu/wp-content/uploads/2021/04/idcPic2.jpeg"
+        src="../images/banner.jpeg"
         alt="Empathy Bytes landing image"
         objectFit="cover"
         style={mastHeadStyle}
