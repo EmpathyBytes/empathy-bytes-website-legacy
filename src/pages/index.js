@@ -1,7 +1,7 @@
 import * as React from "react";
 import "../styles.css";
 import Hero from "../components/Hero";
-import Layout from "../components/layout";
+import Layout from "../components/Layout";
 
 const pageStyles = {
   color: "#232129",

@@ -1,11 +1,9 @@
 import * as React from "react";
 import "../styles.css";
-import NavBar from "../components/navbar";
 import Project from "../components/Project";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import Layout from "../components/layout";
-import { client } from "../client";
 import { useStaticQuery, graphql } from "gatsby";
 
 const container = {

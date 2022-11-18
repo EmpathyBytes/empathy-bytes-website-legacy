@@ -1,11 +1,11 @@
 import * as React from "react";
-import NavBar from "./navbar";
+import Navbar from "./Navbar";
 
 export default function Layout(props) {
-    return (
-        <div>
-            <NavBar/>
-            {props.children}
-        </div>
-    )
+  return (
+    <div>
+      <Navbar />
+      {props.children}
+    </div>
+  );
 }
