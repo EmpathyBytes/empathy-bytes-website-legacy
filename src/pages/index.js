@@ -1,6 +1,6 @@
 import * as React from "react";
 import "../styles.css";
-import Hero from "../components/hero";
+import Hero from "../components/Hero";
 import Layout from "../components/layout";
 
 const pageStyles = {
