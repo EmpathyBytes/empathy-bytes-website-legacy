@@ -1,12 +1,6 @@
-import * as React from "react";
+import React, { useContext, useEffect } from "react";
 import '../styles.css';
 import NavBar from "../components/navbar";
-import Layout from "../components/layout";
-
-// how do i put fields in?
-const contactBox = {
-
-};
 
 const pageStyles = {
   color: "#232129",
@@ -24,20 +18,46 @@ const headingAccentStyles = {
 
 const contactPage = () => {
    return(
-       <Layout>
+       <div>
+       <NavBar/>
+       <main style={pageStyles}>
+           <h1 style={headingStyles}>
+               Test
+               <br />
+               <span style={headingAccentStyles}>
+           Contact Us
+       </span>
+           </h1>
            <div>
-               <main style={pageStyles}>
-                   <h1 style={headingStyles}>
-                       Test
-                       <br />
-                       <span style={headingAccentStyles}>
-               Contact Us
-           </span>
-                   </h1>
-               </main>
+           <form method="post" action="#">
+             <label>
+               Name <br/>
+               <input type="text" name="name" id="name" />
+             </label>
+             <br/>
+             <label>
+               Email <br/>
+               <input type="email" name="email" id="email" />
+             </label>
+             <br/>
+             <label>
+               Subject <br/>
+               <input type="text" name="subject" id="subject" />
+             </label>
+             <br/>
+             <label>
+               Message <br/>
+               <textarea name="message" id="message" rows="5" />
+             </label>
+             <br/>
+             <button type="submit">Send</button>
+             <input type="reset" value="Clear" />
+           </form>
            </div>
-       </Layout>
+           </main>
+       </div>
    );
 };
 
 export default contactPage;
+//export default contactBox;

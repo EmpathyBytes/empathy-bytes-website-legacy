@@ -1,4 +1,5 @@
-import React, { useState, useEffect, useCallback } from "react";
+import * as React from "react";
+import "../styles.css";
 import PeopleCard from "../components/PeopleCard";
 import { useStaticQuery, graphql } from "gatsby";
 import Layout from "../components/layout";
@@ -25,7 +26,21 @@ const responsive = {
   },
 };
 
-// Temporary page created to house the people card information - Jacob
+const pageStyles = {
+  color: "#232129",
+  padding: 96,
+  fontFamily: "-apple-system, Roboto, sans-serif, serif",
+};
+
+const headingStyles = {
+  marginTop: 0,
+  marginBottom: 64,
+  maxWidth: 320,
+};
+
+const headingAccentStyles = {
+  color: "#663399",
+};
 
 const container = {
   backgroundColor: "#003057",
@@ -61,7 +76,8 @@ const paragraph = {
   fontSize: "1.5vw",
   color: "white",
 };
-function PeoplePage() {
+
+function AboutPage() {
   const data = useStaticQuery(graphql`
     query MyQuery {
       allWpPost(
@@ -93,8 +109,6 @@ function PeoplePage() {
   return (
     <Layout>
       <div style={container}>
-        <hr style={gapS} />
-
         <div>
           <h1 style={header}>About Us</h1>
           <p style={paragraph}>
@@ -108,8 +122,6 @@ function PeoplePage() {
             program here.
           </p>
         </div>
-
-        <hr style={gapL} />
 
         <div>
           <h1 style={header2}>Web Team</h1>
@@ -131,6 +143,4 @@ function PeoplePage() {
   );
 }
 
-export default PeoplePage;
-
-export const Head = () => <title>People Test - Jacob</title>;
+export default AboutPage;
