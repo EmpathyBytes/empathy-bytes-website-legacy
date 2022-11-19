@@ -29,7 +29,7 @@ const codeStyles = {
 
 const IndexPage = () => {
   return (
-    <Layout>
+    <Layout transparent>
       <Hero />
       <main style={pageStyles}>
         <h1 style={headingStyles}>
