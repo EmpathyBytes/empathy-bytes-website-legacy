@@ -16,44 +16,70 @@ const headingAccentStyles = {
   color: "#663399",
 };
 
+const button = {
+    background: "#fff",
+    borderRadius: "1%",
+    padding: "1%",
+    width: "15vw",
+    height: "1.5vw",
+    margin: "1%",
+
+};
+
+const labelStyle = {
+    fontFamily: "Roboto",
+    fontSize: "1.7vw",
+    marginBottom: "1%",
+};
+
 const contactPage = () => {
    return(
        <div>
        <NavBar/>
-       <main style={pageStyles}>
-           <h1 style={headingStyles}>
-               Test
-               <br />
-               <span style={headingAccentStyles}>
-           Contact Us
-       </span>
-           </h1>
-           <div>
-           <form method="post" action="#">
-             <label>
-               Name <br/>
-               <input type="text" name="name" id="name" />
-             </label>
-             <br/>
-             <label>
-               Email <br/>
-               <input type="email" name="email" id="email" />
-             </label>
-             <br/>
-             <label>
-               Subject <br/>
-               <input type="text" name="subject" id="subject" />
-             </label>
-             <br/>
-             <label>
-               Message <br/>
-               <textarea name="message" id="message" rows="5" />
-             </label>
-             <br/>
-             <button type="submit">Send</button>
-             <input type="reset" value="Clear" />
-           </form>
-           </div>
+           <main style={pageStyles}>
+               <div>t</div>
+               <div>t</div>
+               <div class="row">
+                        <div class="column" width = "50%">
+                           <h1 style={headingStyles}>
+                                <span style={headingAccentStyles}>
+                                    Contact Us
+                                </span>
+                           </h1>
+                        <div>
+                            insert image of team here
+                        </div>
+                        </div>
+                        <div class="column">
+                        <form method="post" action="#">
+                             <label style = {labelStyle}>
+                               Name <br/>
+                               <input style = {button} type="text" name="name" id="name" />
+                             </label>
+                             <br/>
+                             <label style = {labelStyle}>
+                               Email <br/>
+                               <input style = {button} type="email" name="email" id="email" />
+                             </label>
+                             <br/>
+                             <label style = {labelStyle}>
+                               Subject <br/>
+                               <input style = {button} type="text" name="subject" id="subject" />
+                             </label>
+                             <br/>
+                             <label style = {labelStyle}>
+                               Message <br/>
+                               <textarea name="message" id="message" rows="5" />
+                             </label>
+                             <br/>
+                             <button type="submit">Send</button>
+                             <input style = {labelStyle} type="reset" value="Clear" />
+                           </form>
+                        </div>
+                      </div>
+               <div>
+
+               </div>
            </main>
        </div>
    );
