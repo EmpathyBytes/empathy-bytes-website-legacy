@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import '../styles.css';
 import NavBar from "../components/navbar";
+import { StaticImage } from "gatsby-plugin-image";
 
 const pageStyles = {
   color: "#232129",
@@ -51,7 +52,7 @@ const contactPage = () => {
                         </div>
                         </div>
                         <div class="column">
-                        <form method="post" action="#">
+                        <form method="post" action= "mailto: audreychung10@gmail.com">
                              <label style = {labelStyle}>
                                Name <br/>
                                <input style = {button} type="text" name="name" id="name" />
@@ -73,7 +74,7 @@ const contactPage = () => {
                              </label>
                              <br/>
                              <button type="submit">Send</button>
-                             <input style = {labelStyle} type="reset" value="Clear" />
+                             <button type="reset">Clear</button>
                            </form>
                         </div>
                       </div>
