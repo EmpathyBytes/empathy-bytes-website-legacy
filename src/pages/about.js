@@ -29,6 +29,7 @@ const responsive = {
 const pageStyles = {
   color: "#232129",
   padding: 96,
+  paddingTop: 180,
   fontFamily: "-apple-system, Roboto, sans-serif, serif",
 };
 
@@ -47,6 +48,7 @@ const container = {
   height: "100vh",
   width: "100vw",
   padding: "3% 1% 1% 3%",
+  paddingTop: 180,
 };
 const header = {
   fontFamily: "Roboto",

@@ -46,7 +46,7 @@ const ProjectsPage = () => {
                   image={
                     item.featuredImage != null
                       ? item.featuredImage.node.mediaItemUrl
-                      : "https://httpcats.com/418.jpg"
+                      : "../images/empathy-bytes-1.jpeg"
                   }
                 />
               </Grid>
