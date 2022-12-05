@@ -13,49 +13,44 @@ const container = {
 };
 
 const ProjectsPage = () => {
-  const data = useStaticQuery(graphql`
-    query newQuery {
-      allWpPost(
-        filter: {
-          categories: { nodes: { elemMatch: { slug: { eq: "interviews" } } } }
-        }
-      ) {
-        nodes {
-          title
-          featuredImage {
-            node {
-              mediaItemUrl
-            }
+  const path = require(`path`)
+  const { slash } = require(`gatsby-core-utils`)
+  
+  exports.createPages = async ({ graphql, actions }) => {
+    const { createPage } = actions
+  
+    // query content for WordPress posts
+    const {
+      data: {
+        allWpPost: { nodes: allPosts },
+      },
+    } = await graphql(`
+      query {
+        allWpPost {
+          nodes {
+            id
+            uri
           }
         }
       }
-    }
-  `);
-
-  const arr = data.allWpPost.nodes;
-
-  return (
-    <Layout>
-      <div style={container}>
-        <Box sx={{ flexGrow: 1 }}>
-          <Grid container spacing={2}>
-            {arr.map((item) => (
-              <Grid Project xs={6} padding={2}>
-                <Project
-                  title={item.title}
-                  image={
-                    item.featuredImage != null
-                      ? item.featuredImage.node.mediaItemUrl
-                      : "https://httpcats.com/418.jpg"
-                  }
-                />
-              </Grid>
-            ))}
-          </Grid>
-        </Box>
-      </div>
-    </Layout>
-  );
+    `)
+  
+    const postTemplate = path.resolve(`./src/templates/post.js`)
+  
+    allPosts.forEach(post => {
+      createPage({
+        // will be the url for the page
+        path: post.uri,
+        // specify the component template of your choice
+        component: slash(postTemplate),
+        // In the ^template's GraphQL query, 'id' will be available
+        // as a GraphQL variable to query for this post's data.
+        context: {
+          id: post.id,
+        },
+      })
+    })
+  }
 };
 
 export default ProjectsPage;

@@ -3,7 +3,7 @@ import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
-import Layout from "./Layout";
+import Layout from "./layout";
 
 // const title = {
 //   fontSize: "1em",
