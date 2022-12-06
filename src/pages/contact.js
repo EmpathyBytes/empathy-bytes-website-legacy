@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import "../styles.css";
 import NavBar from "../components/navbar";
-import Layout from "../components/Layout";
+import Layout from "../components/layout";
 import { StaticImage } from "gatsby-plugin-image";
 
 const pageStyles = {

@@ -22,6 +22,7 @@ const ProjectsPage = () => {
       ) {
         nodes {
           title
+          slug
           featuredImage {
             node {
               mediaItemUrl
@@ -48,6 +49,7 @@ const ProjectsPage = () => {
                       ? item.featuredImage.node.mediaItemUrl
                       : "../images/empathy-bytes-1.jpeg"
                   }
+                  url={item.slug}
                 />
               </Grid>
             ))}
