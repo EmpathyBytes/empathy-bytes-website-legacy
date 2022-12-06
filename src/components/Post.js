@@ -1,7 +1,6 @@
 import React from "react";
 import { graphql } from "gatsby";
 import Navbar from "./navbar";
-import Grid from "@mui/material/Grid";
 
 const container = {
   paddingTop: 170,

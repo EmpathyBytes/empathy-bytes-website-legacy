@@ -1,7 +1,8 @@
 module.exports = {
+  pathPrefix: "/empathy-bytes-website",
   siteMetadata: {
     title: `Empathy Bytes`,
-    siteUrl: `https://www.yourdomain.tld`
+    siteUrl: `https://www.yourdomain.tld`,
   },
   plugins: [
     //   {
@@ -11,6 +12,23 @@ module.exports = {
     //     "spaceId": "d608cqxcd02b"
     //   }
     // }
+    {
+      resolve: `gatsby-omni-font-loader`,
+      options: {
+        enableListener: true,
+        preconnect: [`https://fonts.googleapis.com`, `https://fonts.gstatic.com`],
+        web: [
+          {
+            name: `Roboto`,
+            file: `https://fonts.googleapis.com/css2?family=Roboto&display=swap`,
+          },
+          {
+            name: `Titillium Web`,
+            file: `https://fonts.googleapis.com/css2?family=Roboto&family=Titillium+Web:wght@700&display=swap`,
+          },
+        ],
+      },
+    },
     {
       resolve: `gatsby-source-wordpress`,
       options: {
@@ -30,25 +48,34 @@ module.exports = {
           },
         },
       },
-    }, "gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp", "gatsby-plugin-sitemap", {
-      resolve: 'gatsby-plugin-manifest',
+    },
+    "gatsby-plugin-image",
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-sitemap",
+    {
+      resolve: "gatsby-plugin-manifest",
       options: {
-        "icon": "src/images/icon.png"
-      }
-    }, "gatsby-plugin-mdx", "gatsby-transformer-remark", {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        "name": "images",
-        "path": "./src/images/"
+        icon: "src/images/icon.png",
       },
-      __key: "images"
-    }, {
-      resolve: 'gatsby-source-filesystem',
+    },
+    "gatsby-plugin-mdx",
+    "gatsby-transformer-remark",
+    {
+      resolve: "gatsby-source-filesystem",
       options: {
-        "name": "pages",
-        "path": "./src/pages/"
+        name: "images",
+        path: "./src/images/",
       },
-      __key: "pages"
-    }
-  ]
+      __key: "images",
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "pages",
+        path: "./src/pages/",
+      },
+      __key: "pages",
+    },
+  ],
 };

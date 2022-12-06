@@ -8,6 +8,10 @@ import Layout from "../components/layout";
 import MCarousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
+// React Icons Imports
+import { BiRightArrow } from 'react-icons/bi';
+import { BiLeftArrow } from 'react-icons/bi';
+
 const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
@@ -26,9 +30,40 @@ const responsive = {
   },
 };
 
+// Custom Arrows on the About Page (Not working bc of container issues)
+
+const arrowStyleRight = {
+  background: "transparent",
+  color: "#fff",
+  fontSize: "80px",
+  position: "absolute",
+  top: "30%",
+  right: "calc(-4% + 1px)",
+};
+const arrowStyleLeft = {
+  background: "transparent",
+  color: "#fff",
+  fontSize: "80px",
+  position: "absolute",
+  top: "30%",
+  left: "calc(-4% + 1px)",
+};
+
+const CustomRight = ({ onClick }) => (
+  <button onClick={onClick} style={arrowStyleRight}>
+    <BiRightArrow style={{ fontSize: "2vw" }}></BiRightArrow>
+  </button>
+);
+const CustomLeft = ({ onClick }) => (
+  <button onClick={onClick} style={arrowStyleLeft}>
+    <BiLeftArrow style={{ fontSize: "2vw" }}></BiLeftArrow>
+  </button>
+);
+
 const pageStyles = {
-  color: "#232129",
+  color: "#005091",
   padding: 96,
+  paddingTop: 180,
   fontFamily: "-apple-system, Roboto, sans-serif, serif",
 };
 
@@ -43,18 +78,17 @@ const headingAccentStyles = {
 };
 
 const container = {
-  backgroundColor: "#003057",
-  height: "100vh",
-  width: "100vw",
-  padding: "3% 1% 1% 3%",
+  backgroundColor: "#003663",
+  padding: "6% 5% 6% 5%",
+  paddingTop: 180,
 };
 const header = {
-  fontFamily: "Roboto",
+  fontFamily: "Titillium Web",
   fontSize: "3vw",
   color: "white",
 };
 const header2 = {
-  fontFamily: "Roboto",
+  fontFamily: "Titillium Web",
   fontSize: "2vw",
   color: "white",
 };
@@ -123,10 +157,74 @@ function AboutPage() {
           </p>
         </div>
 
-        <div>
+        <div style={gapS}>
           <h1 style={header2}>Web Team</h1>
-          <hr />
-          <MCarousel responsive={responsive}>
+          <MCarousel 
+            responsive={responsive} 
+            autoPlay={true}
+            autoPlaySpeed={7000}
+            infinite={true}
+            // customLeftArrow={<CustomLeft />}
+            // customRightArrow={<CustomRight />}
+            >
+
+            {cleanedArr.map((item) => (
+              <div style={carouselInner}>
+                <PeopleCard
+                  name={item.personName}
+                  image={item.personImage}
+                  role={item.personRole}
+                />
+              </div>
+            ))}
+          </MCarousel>
+        </div>
+
+        <div style={gapS}>
+          <h1 style={header2}>Media Team</h1>
+          <MCarousel 
+            responsive={responsive}
+            autoPlay={true}
+            autoPlaySpeed={7000}
+            infinite={true}>
+            {cleanedArr.map((item) => (
+              <div style={carouselInner}>
+                <PeopleCard
+                  name={item.personName}
+                  image={item.personImage}
+                  role={item.personRole}
+                />
+              </div>
+            ))}
+          </MCarousel>
+        </div>
+
+        <div style={gapS}>
+          <h1 style={header2}>App Team</h1>
+          <MCarousel 
+            responsive={responsive}
+            autoPlay={true}
+            autoPlaySpeed={7000}
+            infinite={true}>
+            {cleanedArr.map((item) => (
+              <div style={carouselInner}>
+                <PeopleCard
+                  name={item.personName}
+                  image={item.personImage}
+                  role={item.personRole}
+                />
+              </div>
+            ))}
+          </MCarousel>
+        </div>
+
+        <div style={gapS}>
+          <h1 style={header2}>Emerging Tech Team</h1>
+          <MCarousel 
+            responsive={responsive}
+            autoPlay={true}
+            autoPlaySpeed={7000}
+            infinite={true}>
             {cleanedArr.map((item) => (
               <div style={carouselInner}>
                 <PeopleCard
