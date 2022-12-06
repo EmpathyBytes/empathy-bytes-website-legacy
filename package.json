@@ -14,6 +14,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "dependencies": {
@@ -36,6 +37,8 @@
     "react": "^18.1.0",
     "react-bootstrap": "^2.6.0",
     "react-dom": "^18.1.0",
+    "react-helmet": "^6.1.0",
+    "react-icons": "^4.7.1",
     "react-helmet": "^6.1.0",
     "react-icons": "^4.7.1",
     "react-multi-carousel": "^2.8.2",
