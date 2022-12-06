@@ -39,8 +39,6 @@ const contactPage = () => {
     <div>
       <NavBar />
       <main style={pageStyles}>
-        <div>t</div>
-        <div>t</div>
         <div class="row">
           <div class="column" width="50%">
             <h1 style={headingStyles}>
