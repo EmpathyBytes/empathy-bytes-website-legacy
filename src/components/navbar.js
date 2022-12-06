@@ -14,8 +14,8 @@ const ReactiveLink = ({ name, path }) => {
 export default function Navbar({ transparent }) {
   const breakpoint = 80;
   const [scroll, setScroll] = useState("");
-  console.log(withPrefix("/test"));
-  console.log("This is a test hi");
+  // console.log(withPrefix("/test"));
+  // console.log("This is a test hi");
 
   const onScroll = () => {
     let scroll = 0;
@@ -27,8 +27,8 @@ export default function Navbar({ transparent }) {
   };
 
   useEffect(() => {
-    console.log(withPrefix("/test"));
-    console.log("This is a test hi");
+    // console.log(withPrefix("/test"));
+    // console.log("This is a test hi");
     if (typeof window !== undefined) {
       window.addEventListener("scroll", onScroll, { passive: true });
       return () => {
