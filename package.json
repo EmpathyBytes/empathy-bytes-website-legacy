@@ -34,7 +34,8 @@
     "react": "^18.1.0",
     "react-bootstrap": "^2.6.0",
     "react-dom": "^18.1.0",
-    "react-multi-carousel": "^2.8.2"
+    "react-multi-carousel": "^2.8.2",
+    "react-router-dom": "^6.4.4"
   },
   "devDependencies": {
     "dumper.js": "^1.3.1",
