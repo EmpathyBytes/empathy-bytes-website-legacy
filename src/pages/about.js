@@ -12,6 +12,7 @@ import "react-multi-carousel/lib/styles.css";
 import { BiRightArrow } from 'react-icons/bi';
 import { BiLeftArrow } from 'react-icons/bi';
 
+// Making the Carousels Responsive - Jacob
 const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
@@ -31,7 +32,7 @@ const responsive = {
 };
 
 // Custom Arrows on the About Page (Not working bc of container issues)
-
+// Styling for custom buttons on the carousel (NOT IN USE CURRENTLY) - Jacob
 const arrowStyleRight = {
   background: "transparent",
   color: "#fff",
@@ -48,7 +49,6 @@ const arrowStyleLeft = {
   top: "30%",
   left: "calc(-4% + 1px)",
 };
-
 const CustomRight = ({ onClick }) => (
   <button onClick={onClick} style={arrowStyleRight}>
     <BiRightArrow style={{ fontSize: "2vw" }}></BiRightArrow>
@@ -60,6 +60,8 @@ const CustomLeft = ({ onClick }) => (
   </button>
 );
 
+
+// Styling for html components & Layout - Jacob
 const pageStyles = {
   color: "#005091",
   padding: 96,
@@ -111,6 +113,8 @@ const paragraph = {
   color: "white",
 };
 
+
+// Pulling "Team Member" info from the Wordpress Database - Jacob
 function AboutPage() {
   const data = useStaticQuery(graphql`
     query MyQuery {
@@ -129,8 +133,8 @@ function AboutPage() {
     }
   `);
 
+  // Storing and Cleaning the Data gather above from WordPress - Jacob
   const arr = data.allWpPost.edges;
-
   const cleanedArr = arr.map((unit) => {
     const { sys, node } = unit;
     const personName = node.title;
@@ -156,7 +160,7 @@ function AboutPage() {
             program here.
           </p>
         </div>
-
+        {/* Web Team Info - Jacob */}
         <div style={gapS}>
           <h1 style={header2}>Web Team</h1>
           <MCarousel 
@@ -179,7 +183,7 @@ function AboutPage() {
             ))}
           </MCarousel>
         </div>
-
+        {/* Media Team Info */}
         <div style={gapS}>
           <h1 style={header2}>Media Team</h1>
           <MCarousel 
@@ -198,7 +202,7 @@ function AboutPage() {
             ))}
           </MCarousel>
         </div>
-
+        {/* App Team Info */}
         <div style={gapS}>
           <h1 style={header2}>App Team</h1>
           <MCarousel 
@@ -217,7 +221,7 @@ function AboutPage() {
             ))}
           </MCarousel>
         </div>
-
+        {/* Emerging Tech Team Info */}
         <div style={gapS}>
           <h1 style={header2}>Emerging Tech Team</h1>
           <MCarousel 
