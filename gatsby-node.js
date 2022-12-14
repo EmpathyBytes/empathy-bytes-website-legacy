@@ -4,13 +4,19 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-// You can delete this file if you're not using it 
+/**
+ * This file is used to generate site pages from 
+ * WP posts.
+ */
+
 const path = require(`path`)
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
+  // WP Posts are formatted according to the Post component.
   const Post = path.resolve("./src/components/Post.js")
 
+  // Retrieves all WP posts. 
   const result = await graphql(`
     {
       allWpPost {

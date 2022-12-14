@@ -2,11 +2,16 @@ import React from "react";
 import { graphql } from "gatsby";
 import Navbar from "./navbar";
 
+// To style the content of the post
 const container = {
   paddingTop: 170,
   padding: 96
 };
 
+/**
+ * Creates the Post component, which is a formatted 
+ * page containing the content of the WordPress post.
+ */
 const Post = ({ data }) => (
   <div>
   <Navbar></Navbar>
@@ -20,6 +25,11 @@ const Post = ({ data }) => (
   </div>
 )
 
+/** 
+ * Query that retrieves, based on WordPress ID, the
+ * title, featured image, and content of a post.
+ * Retrieves other information that may be relevant.
+ */
 export const query = graphql`
   query($id: String) {
     wpPost(id: { eq: $id }) {

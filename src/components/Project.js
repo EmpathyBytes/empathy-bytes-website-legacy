@@ -4,8 +4,14 @@ import CardActions from "@mui/material/CardActions";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 
+/**
+ * Creates a Project component in the form of a card with 
+ * set height and width that uses the title and featured image 
+ * of a WordPress post and links to a page containing the prop post.
+ * @returns the card 
+ */
 export default function Project(props) {
-  
+
   return (
     <Card sx={{ maxWidth: 380 }}>
       <CardMedia
@@ -20,7 +26,7 @@ export default function Project(props) {
       <CardActions>
         <Button href={"/post/" + props.url}
           size="small">
-            {props.title}
+          {props.title}
         </Button>
       </CardActions>
     </Card>
