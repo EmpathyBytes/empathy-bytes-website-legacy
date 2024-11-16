@@ -26,7 +26,7 @@
     "gatsby-omni-font-loader": "^2.0.2",
     "gatsby-plugin-image": "^2.24.0",
     "gatsby-plugin-manifest": "^4.24.0",
-    "gatsby-plugin-mdx": "^4.3.0",
+    "gatsby-plugin-mdx": "^4.4.0",
     "gatsby-plugin-sharp": "^4.24.0",
     "gatsby-plugin-sitemap": "^5.24.0",
     "gatsby-source-contentful": "^7.22.0",
